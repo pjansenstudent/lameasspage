@@ -38,17 +38,34 @@
 			console.log("json loaded");
 		/* STEP 9: Build out the populateHeader() function */
 			var iScreamInc = request.response();
+			console.Log(iScreamInc);
 			populateHeader(iScreamInc);
 			showTopFlavours(iScreamInc);	
-
-		};
+		}
+		
 		function populateHeader(jsonObj) {
 			var headerH1 = document.createElement('h1');
 			headerH1 = iScreamInc.jsonObj.companyName;
+			header.appendChild(headerH1);
 		}
 
 
 		/* STEP 10a: Assemble the showTopFlavors() function */
+		function showTopFlavours(jsonObj){
+
+			var topFlavours = jsonObj.topFlavors;
+
+			for (var i = 0; i < topFlavours.length; i++){
+				var article = document.createElement('article');
+				var h2 = document.createElement('h2');
+				var image = document.createElement('img');
+				h2.textContent = topFlavours[i].name;
+				image.setAttribute('src', 'images/' + topFlavours[i].image);
+
+				article.appendChild(h2);
+				article.appendChild(image);
+				section.appendChild(article);
+			}
 
 
 			// STEP 10b: Bind the JSON topFlavors object to a var
@@ -65,8 +82,10 @@
 
 				// STEP 10h: Append each complete ARTICLE element to the SECTION element
 		// This page inspired by and adapted from https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON
+		}
 
 		// A special thanks to https://openclipart.org/detail/285225/ice-cream-cones for the awesome ice cream cone illustrations
+		
 		</script>
 	</body>
 </html>
