@@ -33,11 +33,16 @@
 		request.send();
 
 		/* STEP 8: Add an event handler that listens for the onload event of the JSON file/object */
-		
-
+		request.onLoad = function(){
+			console.log("json loaded");
 		/* STEP 9: Build out the populateHeader() function */
+			var iScreamInc = request.response();
+			populateHeader(iScreamInc);
+			showTopFlavours(iScreamInc);	
+
 
 		/* STEP 10a: Assemble the showTopFlavors() function */
+			
 
 			// STEP 10b: Bind the JSON topFlavors object to a var
 
@@ -53,7 +58,7 @@
 
 				// STEP 10h: Append each complete ARTICLE element to the SECTION element
 
-
+		}
 		// This page inspired by and adapted from https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON
 
 		// A special thanks to https://openclipart.org/detail/285225/ice-cream-cones for the awesome ice cream cone illustrations
