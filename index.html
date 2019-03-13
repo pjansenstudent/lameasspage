@@ -34,18 +34,18 @@
 		request.send();
 
 		/* STEP 8: Add an event handler that listens for the onload event of the JSON file/object */
-		request.onLoad = function(){
+		request.onload = function(){
 			console.log("json loaded");
 		/* STEP 9: Build out the populateHeader() function */
-			var iScreamInc = request.response();
-			console.Log(iScreamInc);
+			var iScreamInc = request.response;
+			console.log(iScreamInc);
 			populateHeader(iScreamInc);
 			showTopFlavours(iScreamInc);	
 		}
 		
 		function populateHeader(jsonObj) {
 			var headerH1 = document.createElement('h1');
-			headerH1 = iScreamInc.jsonObj.companyName;
+			headerH1.textContent = jsonObj.companyName;
 			header.appendChild(headerH1);
 		}
 
