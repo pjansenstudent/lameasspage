@@ -30,7 +30,7 @@
 		request.responseType = 'json';
 
 		/* STEP 7: Send the request with the send() method */
-		request.send();
+		console.log(request.send());
 
 		/* STEP 8: Add an event handler that listens for the onload event of the JSON file/object */
 		request.onLoad = function(){
@@ -40,9 +40,15 @@
 			populateHeader(iScreamInc);
 			showTopFlavours(iScreamInc);	
 
+		}
+		populateHeader(jsonObj){
+			var headerH1 = document.createElement('h1');
+			headerH1 = iScreamInc.jsonObj.companyName;
+		}
+
 
 		/* STEP 10a: Assemble the showTopFlavors() function */
-			
+
 
 			// STEP 10b: Bind the JSON topFlavors object to a var
 
@@ -57,8 +63,6 @@
 				// STEP 10g: Append each of the above HTML elements to the ARTICLE element
 
 				// STEP 10h: Append each complete ARTICLE element to the SECTION element
-
-		}
 		// This page inspired by and adapted from https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON
 
 		// A special thanks to https://openclipart.org/detail/285225/ice-cream-cones for the awesome ice cream cone illustrations
