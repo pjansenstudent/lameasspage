@@ -36,6 +36,28 @@
         "candy sprinkles"
       ],
       "image": "strawberry-sprinkle.svg"
+    },
+    {
+      "name": "Nana Nana Choco Choco",
+      "calories": 425,
+      "type": "frozen yogurt",
+      "ingredients": [
+        "Frozen 'gurt",
+        "Banana blend",
+        "Chocolate Chunks"
+      ],
+      "image": "ice-cream-xtra2.svg"
+    },
+    {
+      "name": "Mysterious Mystery",
+      "calories": 425,
+      "type": "Ice Cream?",
+      "ingredients": [
+        "Ice",
+        "Cream",
+        "??? The secret ingredient ???"
+      ],
+      "image": "ice-cream-xtra1.svg"
     }
   ]
 }
